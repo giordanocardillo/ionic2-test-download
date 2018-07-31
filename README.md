@@ -1,20 +1,8 @@
-Ionic 2 App Base
-=====================
+# Example for downloading and opening PDFs using ionic2
 
-This is the base template for Ionic 2 starter apps.
 
-## Using this project
-
-You'll need the Ionic CLI with support for v2 apps:
-
-```bash
-$ npm install -g ionic
-```
-
-Then run:
-
-```bash
-$ ionic start myApp
-```
-
-More info on this can be found on the Ionic [Getting Started](http://ionicframework.com/docs/v2/getting-started/) page.
+## Warning
+This example 'as-is' works on android and iOS but on iOS it doesn't open the PDF file,
+it just shows an empty share dialog. To make the example work in iOS you must
+use the `cordova-plugin-file-opener2` version `2.0.19`. Using this version, beaks Android
+compilation.
