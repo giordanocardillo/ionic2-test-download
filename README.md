@@ -1,8 +1,9 @@
-# Example for downloading and opening PDFs using ionic2
+# Base structure
 
+This is a boilerplate for Ionic 2.1.4 tabs.
 
-## Warning
-This example 'as-is' works on android and iOS but on iOS it doesn't open the PDF file,
-it just shows an empty share dialog. To make the example work in iOS you must
-use the `cordova-plugin-file-opener2` version `2.0.19`. Using this version, breaks Android
-compilation.
+## Needed for running
+* node 8.7.0 (npm 5.4.2)
+* Ionic 2.1.4
+* Cordova 6.5.0
+

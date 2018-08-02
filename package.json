@@ -13,6 +13,12 @@
     "run:before": "build",
     "install:android": "adb install platforms/android/build/outputs/apk/android-debug.apk"
   },
+  "engines": {
+    "node": "8.7.0",
+    "npm": "5.4.2",
+    "cordova": "6.5.0",
+    "ionic": "2.1.4"
+  },
   "dependencies": {
     "@angular/common": "^2.0.1",
     "@angular/compiler": "^2.0.1",
