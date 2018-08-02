@@ -1,0 +1,17 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Transitions
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item tappable (click)="animate('slide')">Slide</ion-item>
+    <ion-item tappable (click)="animate('flip')">Flip</ion-item>
+    <ion-item tappable (click)="animate('curl')">Curl (only iOS)</ion-item>
+    <ion-item tappable (click)="animate('fade')">Fade</ion-item>
+  </ion-list>
+</ion-content>

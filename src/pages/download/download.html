@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Download</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item tappable (click)="openPDF()">PDF HTTP</ion-item>
+    <ion-item tappable (click)="openPDF(true)">PDF HTTPS</ion-item>
+    <ion-item tappable (click)="checkExistence()">Check existence</ion-item>
+    <ion-item tappable (click)="checkNotExistence()">Check not existence</ion-item>
+    <ion-item tappable (click)="sharePDF()">Download and share</ion-item>
+  </ion-list>
+</ion-content>

@@ -5,10 +5,10 @@ import { NativePageTransitions } from 'ionic-native';
 import { BackPage } from '../back/back'
 
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html'
+  selector: 'page-transitions',
+  templateUrl: 'transitions.html'
 })
-export class AboutPage {
+export class TransitionsPage {
 
   constructor(public navCtrl: NavController) {
 

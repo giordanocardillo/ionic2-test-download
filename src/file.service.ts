@@ -8,7 +8,7 @@ import * as path from 'path';
 declare var cordova: any;
 
 @Injectable()
-export class AttachmentService2 {
+export class FileService {
 
   constructor(private platform: Platform, private http: Http) {
   }

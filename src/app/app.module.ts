@@ -1,19 +1,17 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
-import { AboutPage } from '../pages/about/about';
-import { ContactPage } from '../pages/contact/contact';
+import { TransitionsPage } from '../pages/transitions/transitions';
 import { BackPage } from '../pages/back/back';
-import { HomePage } from '../pages/home/home';
+import { DownloadPage } from '../pages/download/download';
 import { TabsPage } from '../pages/tabs/tabs';
-import { AttachmentService2 } from '../attachment-service2';
+import { FileService } from '../file.service';
 
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
+    TransitionsPage,
+    DownloadPage,
     TabsPage,
     BackPage
   ],
@@ -23,15 +21,14 @@ import { AttachmentService2 } from '../attachment-service2';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
-    ContactPage,
-    HomePage,
+    TransitionsPage,
+    DownloadPage,
     TabsPage,
     BackPage
   ],
   providers: [
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    AttachmentService2
+    FileService
   ]
 })
 export class AppModule { }
