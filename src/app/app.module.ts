@@ -3,10 +3,8 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
-import { BackPage } from '../pages/back/back';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-import { AttachmentService2 } from '../attachment-service2';
 
 @NgModule({
   declarations: [
@@ -14,8 +12,7 @@ import { AttachmentService2 } from '../attachment-service2';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage,
-    BackPage
+    TabsPage
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -26,12 +23,10 @@ import { AttachmentService2 } from '../attachment-service2';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage,
-    BackPage
+    TabsPage
   ],
   providers: [
-    { provide: ErrorHandler, useClass: IonicErrorHandler },
-    AttachmentService2
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
 export class AppModule { }
