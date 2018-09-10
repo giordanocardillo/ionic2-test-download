@@ -37,13 +37,14 @@ export class DownloadPage {
   openPDF(https = false) {
     this.platform.ready().then(() => {
 
-      try {
-        let fileURL = 'http://www.orimi.com/pdf-test.pdf';
+        let fileURL = 'http://new.ecostampa.net/imm2pdf/Image.aspx?imgatt=8HH3HC&imganno=2018&imgkey=B1UVUGG7R7K5L&tiplink=5';
         if (https) {
           fileURL = 'https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/pdf_reference_archives/PDFReference.pdf';
         }
 
-        this.fileService.downloadAndOpen(fileURL);
+        this.fileService.downloadAndOpen(fileURL)
+
+
         /*const storageDirectory = this.platform.is('android') ? cordova.file.externalCacheDirectory : cordova.file.tempDirectory;
         const fileDownloadPath = storageDirectory + path.basename(fileURL);
 
@@ -59,9 +60,6 @@ export class DownloadPage {
             console.error("ERRORING");
             console.error(err);
           })*/
-      } catch (err) {
-        console.error(err);
-      }
     });
   }
 }

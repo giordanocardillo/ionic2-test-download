@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Slider</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content>
+  <ubi-slider (slideChange)="onSlideChange($event)" *ngFor="let slider of sliders;" [autoHeight]="true" [bullets]="true">
+    <ubi-slide *ngFor="let i of slides; let idx = index" [ngStyle]="{'height.px': i}">
+      <div class="slide__title">
+        Slide {{idx}}
+      </div>
+      <div class="slide__subtitle">
+        La Repubblica
+      </div>
+    </ubi-slide>
+  </ubi-slider>
+</ion-content>

@@ -1,0 +1,20 @@
+<div class="ubi-slider__wrapper" (pan)="onPan($event)" [ngStyle]="{'height.px': slideHeight}">
+  <div class="ubi-slider__slides-container" [ngStyle]="{'width.%': slides.length * 100, 'transform': 'translate3d(' + slidesTransform + '%, 0, 0)'}">
+    <ng-content></ng-content>
+  </div>
+  <div class="ubi-slider__pagination-bullets" *ngIf="bullets && slides.length > 1">
+    <div class="ubi-slider__pagination-bullets__wrapper">
+      <div class="ubi-slider__pagination-bullet" *ngFor="let i of slides; let idx = index" [ngClass]="{'ubi-slider__pagination-bullet--active': activeSlideIndex === idx }"
+        [ngStyle]="{'width.px': bulletSize, 'height.px': bulletSize, 'margin-left.px': bulletSize / 2, 'margin-right.px': bulletSize / 2}"></div>
+    </div>
+  </div>
+  <div class="ubi-slider__pagination-bullets" *ngIf="dynamicBullets && slides.length > 1">
+    <div class="ubi-slider__pagination-bullets__wrapper" [ngStyle]="{'overflow': 'hidden', 'width.px': 10 * bulletSize}">
+      <div class="ubi-slider__pagination-bullets__container" [ngStyle]="{'transform': 'translateX(' + ((4 * bulletSize) - (activeSlideIndex * 2 * bulletSize)) + 'px)'}">
+        <div class="ubi-slider__pagination-bullet" *ngFor="let i of slides; let idx = index" [ngClass]="{'ubi-slider__pagination-bullet--active': activeSlideIndex === idx,
+          'ubi-slider__pagination-bullet--medium': (activeSlideIndex - 1 === idx) || (activeSlideIndex + 1 === idx), 'ubi-slider__pagination-bullet--small': (activeSlideIndex - 2 === idx) || (activeSlideIndex + 2 === idx) }"
+          [ngStyle]="{'width.px': bulletSize, 'height.px': bulletSize, 'margin-left.px': bulletSize / 2, 'margin-right.px': bulletSize / 2, 'will-change' : 'transform'}"></div>
+      </div>
+    </div>
+  </div>
+</div>
